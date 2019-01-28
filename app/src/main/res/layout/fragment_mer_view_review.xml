@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sc"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="true">
+
+
+        <RelativeLayout
+        android:id="@+id/c2r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/mer_view_review_tv_m"
+        android:layout_marginTop="@dimen/mer_view_review_tv_m">
+
+
+        <ProgressBar
+            android:id="@+id/ratp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:max="5"
+            android:background="@drawable/round"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/progress" />
+
+        <TextView
+            android:id="@+id/textp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#3F812A" />
+
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/ttl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:fontFamily="@font/abeezee2"
+        android:layout_toEndOf="@+id/c2r1"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.2dp"
+        android:layout_below="@+id/c2r1"
+        android:layout_marginTop="@dimen/mer_view_review_tv_m"
+        android:background="#eee" />
+
+    <ImageView
+        android:id="@+id/user"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/view1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/admin" />
+
+    <TextView
+        android:id="@+id/usert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/user"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/abeezee2"
+        android:layout_marginTop="5dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usert"
+                android:layout_centerHorizontal="true"
+                android:theme="@style/RatingBar" />
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:textSize="@dimen/mer_view_offer_tv_s"
+        android:gravity="center_horizontal"
+        android:hint="Review"
+        android:textColorHint="#858484"
+        android:inputType="textPersonName"
+         />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:textColor="@color/green"
+        android:background="@null"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="Submit" />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="1.2dp"
+        android:layout_below="@+id/Submit"
+        android:layout_marginTop="@dimen/mer_view_review_tv_m"
+        android:background="#eee" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/view2"
+        android:layout_marginStart="@dimen/mer_view_review_tv_m"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:text="Reviews/Rating" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/textView2"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/empty_view"
+                android:text="No Reviews"/>
+
+         <!--   <GridView
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="@dimen/mer_Register_tv_ml"
+                android:columnWidth="110dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/textView2"
+
+                android:numColumns="1" />-->
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

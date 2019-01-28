@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:text="Expiry Date"
+        android:id="@+id/ex"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ex"
+        android:layout_marginStart="10dp"
+        android:layout_alignBaseline="@+id/ex"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/exp"/>
+
+    <Switch
+        android:id="@+id/mySwitchPaid"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Paid"
+        android:textColor="@color/colorstart"
+        android:layout_below="@+id/ex"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:checked="false"
+        />
+    <Switch
+        android:id="@+id/mySwitchBlock"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Block"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/mySwitchPaid"
+        android:layout_alignStart="@+id/mySwitchPaid"
+        android:checked="false"
+        />
+
+</RelativeLayout>

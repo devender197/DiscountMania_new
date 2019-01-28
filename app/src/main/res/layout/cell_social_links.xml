@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="2dp"
+    android:paddingEnd="10dp">
+
+        <Button
+             android:id="@+id/btnn"
+             android:layout_width="@dimen/socialpic"
+             android:layout_height="@dimen/socialpic"
+            />
+
+        <!--   <Button
+              android:id="@+id/twi"
+              android:layout_width="@dimen/socialpic"
+              android:layout_height="@dimen/socialpic"
+              android:layout_marginEnd="@dimen/socialpadding"
+              android:layout_marginStart="@dimen/socialpadding"
+
+              android:background="@drawable/twi" />
+
+          <Button
+              android:id="@+id/you"
+              android:layout_width="@dimen/socialpic"
+              android:layout_height="@dimen/socialpic"
+              android:layout_marginEnd="@dimen/socialpadding"
+              android:layout_marginStart="@dimen/socialpadding"
+
+              android:background="@drawable/you" />
+
+          <Button
+              android:id="@+id/inst"
+              android:layout_width="@dimen/socialpic"
+              android:layout_height="@dimen/socialpic"
+              android:layout_marginEnd="@dimen/socialpadding"
+              android:layout_marginStart="@dimen/socialpadding"
+              android:background="@drawable/inst" />
+
+
+          <Button
+              android:id="@+id/fac"
+              android:layout_width="@dimen/socialpic"
+              android:layout_height="@dimen/socialpic"
+              android:layout_marginEnd="@dimen/socialpadding"
+              android:layout_marginStart="@dimen/socialpadding"
+              android:background="@drawable/face" />-->
+
+</RelativeLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.virtualskillset.discountmania">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+   <!-- <uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".admin.AdminMainActivity"
+            android:label="Dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".user.AUserMain"
+            android:label="@string/title_activity_user_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".user.AUserRegister"
+            android:screenOrientation="portrait" />
+
+        <!--<receiver android:name=".reciever.MySMSBroadCastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>-->
+
+        <activity
+            android:name=".subadmin.SubAdminMain"
+            android:label="Dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".merchant.MerchantMain"
+            android:label="@string/title_activity_merchant_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".merchant.MerchantRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetPassActivity"
+            android:label="Password Reset"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.AUserMerList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchant.MerAddOfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.AUserDigitalCard"
+            android:label="Digital Card"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".merchant.BarCodeScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".admin.AdminAddMerchantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchant.MerchantImagesAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SpalashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".merchant.MerchantUpdatePfActivity"
+            android:label="@string/title_activity_merchant_update_pf"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Base"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".merchant.MerchantNewCustomer"
+            android:label="New Customer" />
+        <activity
+            android:name=".merchant.MerDetailsActivity"
+            android:label="@string/title_activity_mer_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Base"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".admin.AdminMerBlockPaidActivity"
+            android:label="Merchant Access" />
+        <activity
+            android:name=".admin.AdminReqMerchantsActivity"
+            android:label="Merchants Requests" />
+        <activity
+            android:name=".user.AUserMall"
+            android:label="Mall" />
+        <activity android:name=".merchant.FullImageActivity" />
+        <activity
+            android:name=".merchant.TransactionsActivity"
+            android:label="Happy Customers" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="About" />
+        <activity
+            android:name=".user.AUserBestOffers"
+            android:label="Best Offers" />
+        <activity android:name=".merchant.MerProfilePicActivity" />
+        <activity
+            android:name=".admin.AdminAddMerImgActivity"
+            android:label="@string/title_activity_admin_add_mer_img"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".user.AUserProfile"
+            android:label="Profile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".subadmin.SubAdminAddMerchnat"
+            android:label="Add Merchant"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".admin.AdminSubAdAccess"
+            android:label="SubAdmin Info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".admin.AdminUserAccess"
+            android:label="User Access"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".admin.ViewMerListAvtivity"
+            android:label="Merchants"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.AUserFilters"
+            android:label="Filters"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".subadmin.SubMerListAvtivity"
+            android:label="Merchants"
+            android:screenOrientation="portrait" />
+        <activity android:name=".admin.MainBannerActivity"
+            android:label="Home Page Banner"
+            android:screenOrientation="portrait"
+            ></activity>
+    </application>
+
+</manifest>

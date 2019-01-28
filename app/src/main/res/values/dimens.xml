@@ -1,0 +1,66 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- merchant add -->
+    <dimen name="mer_Register_tv_ml">10dp</dimen>
+    <dimen name="mer_Register_tv_ts">10sp</dimen>
+    <dimen name="mer_Register_tv_mt">5dp</dimen>
+    <dimen name="mer_Register_view_mt">3dp</dimen>
+    <dimen name="mer_Register_et_se">10dp</dimen>
+    <dimen name="mer_view_tv_mt">5dp</dimen>
+    <dimen name="socialpic">30dp</dimen>
+    <dimen name="socialpadding">15dp</dimen>
+
+    <dimen name="cus_best_offer_marging_pic">10dp</dimen>
+    <dimen name="cus_best_offer_km_dtl_txt_sz">10sp</dimen>
+
+    <dimen name="edit_padding">5dp</dimen>
+
+
+    <dimen name="new_customer_card_m">5dp</dimen>
+    <dimen name="new_customer_tv_ml">10sp</dimen>
+    <dimen name="new_customer_tv_mt">5dp</dimen>
+    <dimen name="new_customer_tv_ts">10sp</dimen>
+    <dimen name="new_customer_bt_m">20dp</dimen>
+    <dimen name="new_customer_name_m">20dp</dimen>
+    <dimen name="new_customer_edit_mt">10dp</dimen>
+    <dimen name="new_customer_pic_hw">180dp</dimen>
+    <dimen name="new_customer_edit_m_se">40dp</dimen>
+
+    <dimen name="request_merchant_m">10dp</dimen>
+
+
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+    <dimen name="mer_view_review_tv_m">10dp</dimen>
+    <dimen name="mer_view_detail_tv_m">10dp</dimen>
+    <dimen name="mer_view_detail_tv_top">5dp</dimen>
+
+    <dimen name="mer_view_offer_tv_s">10sp</dimen>
+    <dimen name="mer_view_offer_tv_m">10dp</dimen>
+    <dimen name="add_offer_edit_m_se">20dp</dimen>
+    <dimen name="add_offer_edit_tb">10dp</dimen>
+
+
+    <dimen name="abt_tv_fca_sz">30sp</dimen>
+    <dimen name="abt_tv_dev_sz">14sp</dimen>
+    <dimen name="abt_tv_vs_sz">12sp</dimen>
+    <dimen name="abt_iv_sz">150dp</dimen>
+    <dimen name="abt_app_wh">100dp</dimen>
+    <dimen name="abt_app_mt">21dp</dimen>
+    <dimen name="abt_app_mr">24dp</dimen>
+    <dimen name="abt_app_mrmid">13dp</dimen>
+    <dimen name="abt_tv_fdbk_mt">20dp</dimen>
+    <dimen name="abt_tv_try_mt">38dp</dimen>
+    <dimen name="abt_tv_try_sz">25sp</dimen>
+
+</resources>

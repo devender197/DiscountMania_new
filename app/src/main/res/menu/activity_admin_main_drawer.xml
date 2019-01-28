@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_add_sbadmin"
+            android:icon="@drawable/ic_admin"
+            android:title="Add Subadmin" />
+        <item
+            android:id="@+id/nav_info_sbadmin"
+            android:icon="@drawable/ic_info_sabadmin"
+            android:title="Info Subadmin" />
+        <item
+            android:id="@+id/nav_add_mer"
+            android:icon="@drawable/ic_merchant"
+            android:title="Add Merchant" />
+        <item
+            android:id="@+id/nav_add_category"
+            android:icon="@drawable/ic_category"
+            android:title="Add Category " />
+        <item
+            android:id="@+id/nav_merchant"
+            android:icon="@drawable/ic_mer"
+            android:title="Merchant" />
+        <item
+            android:id="@+id/nav_req_mer"
+            android:icon="@drawable/ic_mer"
+            android:title="Merchant Requests" />
+        <item
+            android:id="@+id/nav_block_mer"
+            android:icon="@drawable/ic_approve"
+            android:title="Merchant Access" />
+        <item
+            android:id="@+id/nav_block_usr"
+            android:icon="@drawable/ic_approve"
+            android:title="User Access" />
+        <item
+            android:id="@+id/nav_mainbnr"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Home Banners" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

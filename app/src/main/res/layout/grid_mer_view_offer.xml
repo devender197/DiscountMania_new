@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_custom_gridview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/android_gridview_image"
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:layout_marginStart="@dimen/mer_Register_tv_ml"
+        android:layout_marginEnd="@dimen/mer_Register_tv_ml"
+        android:layout_marginTop="@dimen/mer_view_tv_mt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.9dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="184dp"
+        android:background="#eee" />
+
+    <TextView
+        android:id="@+id/android_gridview_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/android_gridview_image"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/capriola2"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/android_gridview_image"
+        android:layout_below="@+id/catee"
+        android:text="Price - "
+        android:textColor="@color/colorstart"
+        android:textSize="@dimen/mer_view_offer_tv_s" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/mer_view_offer_tv_s"
+        android:layout_toEndOf="@+id/rs"
+        android:layout_alignBaseline="@+id/rs"
+        android:text="100₹" />
+
+    <TextView
+        android:id="@+id/dis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3F812A"
+        android:textSize="@dimen/mer_view_offer_tv_s"
+        android:layout_marginStart="6dp"
+        android:layout_below="@+id/cat"
+        android:layout_toEndOf="@+id/price"
+        android:text="15% Off" />
+
+    <TextView
+        android:id="@+id/catee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/android_gridview_image"
+        android:layout_below="@+id/android_gridview_text"
+        android:text="Category"
+       android:textColor="@color/colorstart"
+        android:textSize="@dimen/mer_view_offer_tv_s" />
+    <TextView
+        android:id="@+id/cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/catee"
+        android:layout_marginStart="10dp"
+        android:layout_alignBaseline="@+id/catee"
+        android:text="Mubiles"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/mer_view_offer_tv_s" />
+
+    <TextView
+        android:id="@+id/tm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/android_gridview_image"
+        android:layout_toStartOf="@+id/time"
+        android:fontFamily="@font/capriola2"
+        android:textSize="@dimen/mer_view_offer_tv_s"
+        android:text="Valid till-" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/mer_view_offer_tv_s"
+        android:fontFamily="@font/abeezee2"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/android_gridview_image"
+        android:text="26 Nov 18" />
+
+</RelativeLayout>

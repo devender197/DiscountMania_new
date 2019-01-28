@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:text="Owner Name"
+        android:id="@+id/own"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/own"
+        android:layout_marginStart="10dp"
+        android:layout_alignBaseline="@+id/own"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/own_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/own"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@+id/own"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:text="Expiry Date"
+        android:id="@+id/ex"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ex"
+        android:layout_marginStart="10dp"
+        android:layout_alignBaseline="@+id/ex"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/exp"/>
+
+    <Switch
+        android:id="@+id/mySwitchPaid"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Paid    "
+        android:textColor="@color/colorstart"
+        android:layout_below="@+id/exp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:checked="false"
+        />
+    <Switch
+        android:id="@+id/mySwitchAprove"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Approve "
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/common_google_signin_btn_text_light"
+        android:layout_alignBaseline="@+id/mySwitchPaid"
+        android:checked="false"
+        />
+    <Switch
+        android:id="@+id/mySwitchBlock"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Block   "
+        android:layout_marginTop="10dp"
+        android:textColor="#F44336"
+        android:layout_below="@+id/mySwitchPaid"
+        android:layout_alignStart="@+id/mySwitchPaid"
+        android:checked="false"
+        />
+
+</RelativeLayout>

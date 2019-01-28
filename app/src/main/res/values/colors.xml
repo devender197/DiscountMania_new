@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#09c6df</color>
+    <color name="colorPrimaryDark">#292b3d</color>
+    <color name="colorstart">#09c6df</color>
+    <color name="colorBlack">#292b3d</color>
+
+    <color name="white">#ffffff</color>
+    <color name="end">#0bcce6</color>
+    <color name="gray">#fafafa</color>
+    <color name="darkGrey"> #A9A9A9</color>
+
+    <color name="colorAccent">#292b3d</color>
+    <color name="text">#D3D3D3</color>
+    <color name="input_register_bg">#F5F5F5</color>
+
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#D3D3D3</color>
+
+    <color name="screen">#eee</color>
+    <color name="editleft">#8B8B8B</color>
+    <color name="hint">#d5d4d4</color>
+    <color name="green">#3F812A</color>
+    <color name="color_bottm_text">#000</color>
+    <color name="button_pressed">#ff8a00</color>
+    <color name="button_default">#EEEEEE</color>
+    <color name="textcolor">#09c6df</color>
+</resources>

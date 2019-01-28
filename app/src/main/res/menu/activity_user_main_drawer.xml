@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_admin"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_best_offer"
+            android:icon="@drawable/ic_offer"
+            android:title="Best Offer" />
+        <item
+            android:id="@+id/nav_team"
+            android:icon="@drawable/ic_merchant"
+            android:title="Mall" />
+        <item
+            android:id="@+id/nav_benfits"
+            android:icon="@drawable/ic_offer"
+            android:title="Used Service Benefits" />
+        <item
+            android:id="@+id/nav_digitalcard"
+            android:icon="@drawable/ic_info_sabadmin"
+            android:title="Digital Card" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_doorstep"
+                android:icon="@drawable/ic_doorstep"
+                android:title="Door Step" />
+
+            <item
+                android:id="@+id/nav_itr"
+                android:icon="@drawable/ic_itr"
+                android:title="Fill ITR" />
+            <item
+                android:id="@+id/nav_insurance"
+                android:icon="@drawable/ic_ins"
+                android:title="Insurance" />
+            <item
+                android:id="@+id/nav_loan"
+                android:icon="@drawable/ic_loan"
+                android:title="Loan" />
+            <item
+                android:id="@+id/nav_credit"
+                android:icon="@drawable/ic_score"
+                android:title="Credit Score" />
+
+            <item
+                android:id="@+id/nav_gstsoft"
+                android:icon="@drawable/ic_soft"
+                android:title="GST Software" />
+            <item
+                android:id="@+id/nav_it"
+                android:icon="@drawable/ic_help"
+                android:title="IT Solutions" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+ >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/mer_view_offer_tv_m"
+                android:layout_marginTop="@dimen/mer_view_offer_tv_m"
+                android:fontFamily="@font/capriola2"
+                android:text="Description"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/mer_view_offer_tv_s" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="fill_parent"
+                android:layout_height="0.9dp"
+                android:layout_below="@+id/pro"
+                android:layout_marginTop="@dimen/mer_Register_view_mt"
+                android:background="#eee" />
+
+
+        </RelativeLayout>
+
+   <!-- <GridView
+        android:id="@+id/grid"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rel"
+        android:columnWidth="110dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:numColumns="1" />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rel"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+        android:columnWidth="110dp" />
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:text="No Products" />
+
+
+</RelativeLayout>

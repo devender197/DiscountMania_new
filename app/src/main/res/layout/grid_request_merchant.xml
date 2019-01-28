@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/android_custom_gridview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/request_merchant_m"
+        android:layout_marginTop="@dimen/request_merchant_m"
+        android:fontFamily="@font/abeezee"
+        android:text="TextView"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/head"
+        android:layout_below="@+id/head"
+        android:layout_weight="1"
+        android:fontFamily="@font/abeezee"
+        android:textSize="10sp"
+        android:layout_marginBottom="@dimen/request_merchant_m"/>
+    <TextView
+        android:id="@+id/mobb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/head"
+        android:layout_below="@+id/detail"
+        android:layout_weight="1"
+        android:fontFamily="@font/abeezee"
+        android:textSize="12sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/request_merchant_m"/>
+
+    <Button
+        android:id="@+id/mySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:fontFamily="@font/abeezee"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/detail"
+        android:layout_marginEnd="@dimen/request_merchant_m"
+        android:text="Approve"
+        android:textAllCaps="false"
+        />
+
+    <TextView
+        android:id="@+id/crt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/mobb"
+        android:fontFamily="@font/abeezee"
+        android:layout_alignStart="@+id/mobb"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

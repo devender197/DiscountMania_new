@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".admin.AddSubAdminFragment">
+
+    <FrameLayout
+        android:id="@+id/admin"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+
+        <ImageView
+            android:id="@+id/img_ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_admin" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_below="@+id/admin"
+        android:background="@drawable/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="#e7e7e7"
+        android:hint="Name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="textPersonName"
+        />
+
+
+    <EditText
+        android:id="@+id/mobile"
+        android:background="@drawable/edittext"
+        android:layout_below="@+id/name"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="#e7e7e7"
+        android:hint="Mobile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/enterpas"
+        android:background="@drawable/edittext"
+        android:layout_below="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="#e7e7e7"
+        android:hint="Password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:id="@+id/conpas"
+        android:background="@drawable/edittext"
+        android:layout_below="@+id/enterpas"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="#e7e7e7"
+        android:hint="Confirm Password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="textPassword"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/conpas"
+        android:layout_alignStart="@+id/name"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/end"
+            android:checked="true"
+            android:text="Agent"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:paddingRight="10dp"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/end"
+            android:text="Employee"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/end"
+            android:text="Other"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:text="Register"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/grad"
+        android:textColor="#fff"/>
+    <TextView
+        android:id="@+id/txtPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="35dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eee"
+    tools:context=".user.AUserFilters">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                android:layout_marginTop="@dimen/mer_Register_tv_mt"
+                android:fontFamily="@font/capriola"
+                android:text="State"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/mer_Register_tv_ts" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="fill_parent"
+                android:layout_height="0.9dp"
+                android:layout_below="@+id/t1"
+                android:layout_marginTop="@dimen/mer_Register_view_mt"
+                android:background="@color/screen" />
+            <Spinner
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/stateSpinner"
+                android:layout_below="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:background="@android:color/transparent"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                android:layout_marginTop="@dimen/mer_Register_tv_mt"
+                android:fontFamily="@font/capriola"
+                android:text="District"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/mer_Register_tv_ts" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.9dp"
+                android:layout_below="@+id/t2"
+                android:layout_marginTop="@dimen/mer_Register_view_mt"
+                android:background="@color/screen" />
+            <Spinner
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/disSpinner"
+                android:layout_below="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:background="@android:color/transparent"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card2"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                android:layout_marginTop="@dimen/mer_Register_tv_mt"
+                android:fontFamily="@font/capriola"
+                android:text="Sub Category"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/mer_Register_tv_ts" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="fill_parent"
+                android:layout_height="0.9dp"
+                android:layout_below="@+id/t3"
+                android:layout_marginTop="@dimen/mer_Register_view_mt"
+                android:background="@color/screen" />
+            <Spinner
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/subSpinner"
+                android:layout_below="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:background="@android:color/transparent"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@android:drawable/bottom_bar"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingBottom="1.0dip"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    <Button
+        android:id="@+id/clear"
+        android:layout_weight="1.0"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="Clear All"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_weight="1.0"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/clear"
+        android:background="@color/colorPrimary"
+        android:text="Submit"
+        android:textColor="#fff" />
+    </LinearLayout>
+
+
+</RelativeLayout>

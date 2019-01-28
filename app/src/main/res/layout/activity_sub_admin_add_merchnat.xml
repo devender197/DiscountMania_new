@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context=".subadmin.SubAdminAddMerchnat">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/diss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/capriola"
+                        android:text="General"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+                    <View
+                        android:id="@+id/vieww"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/diss"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="#eee" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vieww"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/cat"
+                            android:layout_width="140dp"
+                            android:layout_height="30dp"
+                            android:layout_alignStart="@+id/sh_name"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/spn_sub"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/spinner1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:layout_marginStart="5dp"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/drop" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/sub_cat"
+                            android:layout_width="140dp"
+                            android:layout_height="30dp"
+                            android:layout_alignEnd="@+id/own_name"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/spn_sub"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/spinner2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="180dp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/drop" />
+
+                        </RelativeLayout>
+
+
+                        <EditText
+                            android:id="@+id/sh_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sub_cat"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:drawableLeft="@drawable/shp"
+                            android:drawablePadding="5dp"
+                            android:hint="Shop Name"
+                            android:inputType="textCapWords"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#e7e7e7" />
+
+                        <EditText
+                            android:id="@+id/own_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sh_name"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:drawableLeft="@drawable/person"
+                            android:drawablePadding="5dp"
+                            android:hint="Owner Name"
+                            android:inputType="textCapWords"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#e7e7e7" />
+
+
+                        <EditText
+                            android:id="@+id/mob"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/own_name"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:drawableLeft="@drawable/mb"
+                            android:drawablePadding="5dp"
+                            android:ems="10"
+                            android:hint="Mobile"
+                            android:inputType="phone"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#e7e7e7" />
+
+
+                        <EditText
+                            android:id="@+id/mail"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mob"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:drawableLeft="@drawable/mail"
+                            android:drawablePadding="5dp"
+                            android:ems="10"
+                            android:hint="Email Address(Optional)"
+                            android:inputType="textEmailAddress"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#e7e7e7" />
+
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mail"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:drawableLeft="@drawable/pasm"
+                            android:drawablePadding="5dp"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#e7e7e7" />
+
+
+                        <EditText
+                            android:id="@+id/conpass"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/password"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:drawableLeft="@drawable/pasc"
+                            android:drawablePadding="5dp"
+                            android:hint="Confirm Password"
+                            android:inputType="textPassword"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#e7e7e7" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent">-->
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card0"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txtImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/capriola"
+                        android:text="Business Icon"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+                    <View
+                        android:id="@+id/viewImg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/txtImg"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="#eee" />
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/busIcn"
+                        android:layout_below="@id/viewImg"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/bk"/>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardAgree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardImg"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txtAgr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/capriola"
+                        android:text="Agreement Image"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+                    <View
+                        android:id="@+id/viewAgr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/txtAgr"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="#eee" />
+
+                    <ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/agrIcn"
+                        android:layout_below="@id/viewAgr"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/bk"/>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardAgree"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/dis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/capriola"
+                        android:text="Business Description"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/dis"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="#eee" />
+
+                    <EditText
+                        android:id="@+id/business_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:background="@drawable/edittextdark"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="top|left"
+                        android:hint="Business Description"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:maxLines="6"
+                        android:minLines="6"
+                        android:padding="10dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card1"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                        android:layout_marginTop="@dimen/mer_Register_tv_mt"
+                        android:fontFamily="@font/capriola"
+                        android:text="Business Timing"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/mer_Register_tv_ts" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/time"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="@color/screen" />
+
+                    <EditText
+                        android:id="@+id/open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view1"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="15dp"
+                        android:inputType="textCapWords"
+                        android:background="@drawable/edittext"
+                        android:hint="Working Days (Mon-Sat)"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+                    <EditText
+                        android:id="@+id/close"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/open"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:hint="Working Time (10:00Am - 10:00PM)"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card2"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/map"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                        android:layout_marginTop="@dimen/mer_Register_tv_mt"
+                        android:fontFamily="@font/capriola"
+                        android:text="Address"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/mer_Register_tv_ts" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/map"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="@color/screen" />
+
+                    <Button
+                        android:id="@+id/loc"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/view3"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/ad_loc" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/loc"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:fontFamily="@font/capriola"
+                        android:text="Address-from map activity " />
+
+                    <EditText
+                        android:id="@+id/street"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView4"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edittext"
+                        android:hint="Street Address"
+                        android:inputType="textCapWords"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+                    <EditText
+                        android:id="@+id/area"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/street"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:hint="Area"
+                        android:inputType="textCapWords"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+                    <RelativeLayout
+                        android:id="@+id/district"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/area"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="20dp"
+                        android:layout_alignStart="@+id/area"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/spn_sub"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinner3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:src="@drawable/drop" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/state"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/area"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:layout_marginEnd="20dp"
+                        android:layout_alignEnd="@+id/area"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/spn_sub"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinner4"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="180dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:src="@drawable/drop" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/pincode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/district"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edittext"
+                        android:hint="Pin Code"
+                        android:layout_marginBottom="20dp"
+                        android:padding="5dp"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card3"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                        android:layout_marginTop="@dimen/mer_Register_tv_mt"
+                        android:fontFamily="@font/capriola"
+                        android:text="Number"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/mer_Register_tv_ts" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/number"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="@color/screen" />
+
+                    <EditText
+                        android:id="@+id/pan"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view4"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edittext"
+                        android:hint="PAN"
+                        android:inputType="textCapCharacters"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+                    <EditText
+                        android:id="@+id/gst"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pan"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:hint="GST"
+                        android:inputType="textCapCharacters"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+                    <EditText
+                        android:id="@+id/tin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gst"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:hint="TIN"
+                        android:inputType="textCapCharacters"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+                    <EditText
+                        android:id="@+id/cin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tin"
+                        android:layout_marginBottom="@dimen/mer_Register_et_se"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:hint="CIN"
+                        android:inputType="textCapCharacters"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#d5d4d4" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card4"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/social"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                        android:layout_marginTop="@dimen/mer_Register_tv_ml"
+                        android:fontFamily="@font/capriola"
+                        android:text="Social Connect"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/social"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="@color/screen" />
+
+
+                    <EditText
+                        android:id="@+id/whtnm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view5"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:drawablePadding="5dp"
+                        android:hint="WhatsApp Number "
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/hint" />
+
+                    <EditText
+                        android:id="@+id/face"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/whtnm"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:drawablePadding="5dp"
+                        android:hint="Facebook Link"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/hint" />
+
+                    <EditText
+                        android:id="@+id/instagram"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/face"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:drawablePadding="5dp"
+                        android:hint="Instagram Link"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/hint" />
+
+                    <EditText
+                        android:id="@+id/twitter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/instagram"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:drawablePadding="5dp"
+                        android:hint="Twitter Link"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/hint" />
+
+                    <EditText
+                        android:id="@+id/youtube"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/twitter"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="@dimen/mer_Register_et_se"
+                        android:layout_marginStart="@dimen/mer_Register_et_se"
+                        android:layout_marginTop="@dimen/mer_Register_et_se"
+                        android:background="@drawable/edittext"
+                        android:drawablePadding="5dp"
+                        android:hint="Youtube Link"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/hint" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:id="@+id/card6"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/card5"
+                 android:layout_marginTop="5dp">
+
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+
+                     <TextView
+                         android:id="@+id/pay"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentStart="true"
+                         android:layout_alignParentTop="true"
+                         android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                         android:layout_marginTop="@dimen/mer_Register_tv_ml"
+                         android:fontFamily="@font/capriola"
+                         android:text="Payment Method"
+                         android:textColor="@color/colorAccent"
+                         android:textSize="10sp" />
+
+                     <View
+                         android:id="@+id/view6"
+                         android:layout_width="fill_parent"
+                         android:layout_height="0.9dp"
+                         android:layout_below="@+id/pay"
+                         android:layout_marginTop="@dimen/mer_Register_view_mt"
+                         android:background="@color/screen" />
+
+
+                     <EditText
+                         android:id="@+id/mth"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/view6"
+                         android:layout_marginBottom="@dimen/mer_Register_et_se"
+                         android:layout_marginEnd="@dimen/mer_Register_et_se"
+                         android:layout_marginStart="@dimen/mer_Register_et_se"
+                         android:layout_marginTop="@dimen/mer_Register_et_se"
+                         android:background="@drawable/edittext"
+                         android:drawablePadding="5dp"
+                         android:hint="Detail"
+                         android:padding="5dp"
+                         android:textColor="@color/colorAccent"
+                         android:textColorHint="@color/hint" />
+
+
+                 </RelativeLayout>
+             </android.support.v7.widget.CardView>-->
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card5"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rll">
+
+
+                    <TextView
+                        android:id="@+id/dischdr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                        android:layout_marginTop="@dimen/mer_Register_tv_ml"
+                        android:fontFamily="@font/capriola"
+                        android:text="Discounts"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.9dp"
+                        android:layout_below="@+id/dischdr"
+                        android:layout_marginTop="@dimen/mer_Register_view_mt"
+                        android:background="@color/screen" />
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:layout_below="@+id/view8"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+                        <EditText android:id="@+id/disMin"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/hint"
+                            android:layout_height="35dp"
+                            android:background="@drawable/edittext"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:hint="Discount Min%"
+                            android:layout_width="150dp">
+                        </EditText>
+                        <EditText android:layout_height="35dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/hint"
+                            android:id="@+id/disMax"
+                            android:paddingStart="10dp"
+                            android:layout_marginStart="20dp"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:paddingEnd="10dp"
+                            android:hint="Discount Max%"
+                            android:background="@drawable/edittext"
+                            android:layout_width="150dp">
+                        </EditText>
+                    </LinearLayout>
+
+                    <!--</RelativeLayout>-->
+
+
+                    <!-- <EditText
+                         android:id="@+id/disMin"
+                         android:layout_width="150dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="@dimen/mer_Register_et_se"
+                         android:layout_marginStart="@dimen/mer_Register_et_se"
+                         android:layout_marginTop="@dimen/mer_Register_et_se"
+                         android:background="@drawable/edittext"
+                         android:layout_centerHorizontal="true"
+                         android:drawablePadding="5dp"
+                         android:hint="Discount Min"
+                         android:padding="5dp"
+                         android:textColor="@color/colorAccent"
+                         android:textColorHint="@color/hint" />
+                     <EditText
+                         android:id="@+id/disMax"
+                         android:layout_width="150dp"
+                         android:layout_height="wrap_content"
+                         android:layout_toEndOf="@+id/disMin"
+                         android:layout_centerHorizontal="true"
+                         android:layout_alignBaseline="@+id/disMin"
+                         android:background="@drawable/edittext"
+                         android:drawablePadding="5dp"
+                         android:hint="Discount Max"
+                         android:padding="5dp"
+                         android:textColor="@color/colorAccent"
+                         android:textColorHint="@color/hint" />-->
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card8"
+                android:layout_marginTop="5dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tnc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/mer_Register_tv_ml"
+                    android:layout_marginTop="@dimen/mer_Register_tv_ml"
+                    android:fontFamily="@font/capriola"
+                    android:text="Verification"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp" />
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.9dp"
+                    android:layout_below="@+id/tnc"
+                    android:layout_marginTop="@dimen/mer_Register_view_mt"
+                    android:background="@color/screen" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:layout_below="@+id/view7"
+                    android:text="I Accept All " />
+                <TextView
+                    android:id="@+id/tncc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/checkBox"
+                    android:layout_alignBaseline="@+id/checkBox"
+                    android:text="Terms and Conditions"/>
+
+                <EditText
+                    android:id="@+id/otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:ems="10"
+                    android:layout_below="@+id/checkBox"
+                    android:hint="@string/hint_otp"
+                    android:inputType="number"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+
+                <Button
+                    android:id="@+id/btnOtp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/otp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@+id/otp"
+                    android:background="@null"
+                    android:text="@string/btn_otp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+                <!-- Login Button -->
+
+                <!-- Link to Login Screen -->
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/otp"
+                    android:layout_marginTop="20dip"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/btn_register"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/android_custom_gridview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:background="#fff">
+
+
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/request_merchant_m"
+        android:layout_marginTop="@dimen/request_merchant_m"
+        android:text="Admin"
+        android:fontFamily="@font/abeezee"
+        android:textColor="@color/colorAccent" />
+
+
+    <TextView
+        android:id="@+id/mobb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:fontFamily="@font/abeezee"
+        android:textColor="@color/colorstart"
+        android:text="1234567890"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="@dimen/request_merchant_m"
+        android:layout_alignStart="@+id/head"
+        android:textSize="12sp" />
+
+
+    <Switch
+        android:id="@+id/mySwitchBlock"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Block"
+        android:layout_alignBaseline="@+id/head"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/colorAccent"
+        android:checked="false"
+        />
+
+    <TextView
+        android:id="@+id/crt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mobb"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/abeezee"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:textSize="10sp" />
+
+
+
+</RelativeLayout>

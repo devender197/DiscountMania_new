@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen"
+    tools:context=".merchant.MerchantNewCustomer">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffe5e5e5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/new_customer_card_m">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/new_customer_tv_ml"
+            android:layout_marginTop="@dimen/new_customer_tv_mt"
+            android:fontFamily="@font/capriola"
+            android:text="Verify Customer"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/new_customer_tv_ts" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.9dp"
+            android:layout_below="@+id/verify"
+            android:layout_marginTop="@dimen/new_customer_tv_mt"
+            android:background="@color/screen" />
+
+        <EditText
+            android:id="@+id/mob"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext"
+            android:drawableLeft="@drawable/mb"
+            android:drawablePadding="@dimen/edit_padding"
+            android:hint="Mobile"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="@dimen/edit_padding"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/hint" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_above="@+id/veri"
+            android:layout_alignEnd="@+id/veri"
+            android:background="@drawable/blkqr" />
+
+
+
+        <Button
+            android:id="@+id/veri"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/mob"
+            android:layout_below="@+id/mob"
+            android:layout_marginEnd="@dimen/new_customer_edit_m_se"
+            android:layout_marginTop="@dimen/new_customer_bt_m"
+            android:layout_marginBottom="@dimen/new_customer_bt_m"
+            android:background="@drawable/grad"
+            android:text="Verify"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="@dimen/new_customer_card_m">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/new_customer_tv_ml"
+                android:layout_marginTop="@dimen/new_customer_tv_mt"
+                android:fontFamily="@font/capriola"
+                android:text="Customer Detail"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/new_customer_tv_ts" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.9dp"
+                android:layout_below="@+id/time"
+                android:layout_marginTop="@dimen/new_customer_tv_mt"
+                android:background="@color/screen" />
+
+
+            <FrameLayout
+                android:id="@+id/admin"
+                android:layout_width="@dimen/new_customer_pic_hw"
+                android:layout_height="@dimen/new_customer_pic_hw"
+                android:layout_below="@+id/view2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/cusiv"
+                    android:background="@drawable/admin" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle" />
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/new_customer_edit_m_se"
+                android:layout_marginStart="@dimen/new_customer_edit_m_se"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext"
+                android:drawablePadding="@dimen/edit_padding"
+                android:hint="Amount"
+                android:inputType="phone"
+                android:padding="@dimen/edit_padding"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/hint" />
+
+            <TextView
+                android:id="@+id/cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/admin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/new_customer_name_m"
+                android:fontFamily="@font/capriola"
+                android:textColor="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/dis"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/new_customer_edit_m_se"
+                android:layout_marginStart="@dimen/new_customer_edit_m_se"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext"
+                android:drawablePadding="@dimen/edit_padding"
+                android:hint="Discount %"
+                android:maxLength="2"
+                android:inputType="phone"
+                android:padding="@dimen/edit_padding"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/hint" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/final_prc"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/new_customer_edit_m_se"
+                android:layout_marginStart="@dimen/new_customer_edit_m_se"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext"
+                android:drawablePadding="@dimen/edit_padding"
+                android:padding="@dimen/edit_padding"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/dis"
+                android:text="Click to get Final Price"
+                />
+
+         <!--   <EditText
+                android:id="@+id/otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:layout_below="@+id/final_prc"
+                android:hint="@string/hint_otp"
+                android:layout_alignStart="@+id/dis"
+                android:layout_marginTop="5dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:layout_toStartOf="@+id/btnOtp"
+                android:padding="@dimen/edit_padding"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/hint" />
+
+            <Button
+                android:id="@+id/btnOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/otp"
+                android:layout_alignEnd="@+id/sub"
+                android:background="@null"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="@string/btn_otp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />-->
+
+            <Button
+                android:id="@+id/sub"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/final_prc"
+                android:layout_marginEnd="@dimen/new_customer_edit_m_se"
+                android:layout_marginStart="@dimen/new_customer_edit_m_se"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/new_customer_bt_m"
+                android:background="@drawable/grad"
+                android:text="Submit"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

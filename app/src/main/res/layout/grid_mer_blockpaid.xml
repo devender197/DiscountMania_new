@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/android_custom_gridview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="5dp"
+    android:orientation="vertical"
+    android:background="#fff">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:textColor="#FFC400"
+        android:layout_alignBaseline="@+id/head"
+        android:layout_alignEnd="@+id/mobb"
+        android:textAppearance="@style/Widget.AppCompat.RatingBar.Small"
+        android:textSize="10sp"
+        android:id="@+id/paid"/>
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/request_merchant_m"
+        android:layout_marginTop="@dimen/mer_Register_tv_mt"
+        android:fontFamily="@font/abeezee"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/head"
+        android:layout_below="@+id/head"
+        android:layout_weight="1"
+        android:fontFamily="@font/abeezee"
+        android:textSize="10sp"
+        android:layout_marginBottom="@dimen/request_merchant_m"/>
+
+    <TextView
+        android:id="@+id/mobb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/detail"
+        android:layout_toEndOf="@+id/detail"
+        android:fontFamily="@font/abeezee"
+        android:textColor="@color/colorstart"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/btn"
+        android:src="@drawable/ic_menu_manage"
+        android:layout_below="@+id/detail"/>
+
+
+  <!--  <Switch
+        android:id="@+id/mySwitchPaid"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Paid"
+        android:textColor="@color/colorstart"
+        android:layout_below="@+id/detail"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:checked="false"
+        />
+    <Switch
+        android:id="@+id/mySwitchAprove"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Approve"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/common_google_signin_btn_text_light"
+        android:layout_below="@+id/mySwitchPaid"
+        android:layout_alignStart="@+id/mySwitchPaid"
+        android:checked="false"
+        />
+    <Switch
+        android:id="@+id/mySwitchBlock"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Block"
+        android:layout_marginTop="10dp"
+        android:textColor="#F44336"
+        android:layout_below="@+id/mySwitchAprove"
+        android:layout_alignStart="@+id/mySwitchAprove"
+        android:checked="false"
+        />
+-->
+    <TextView
+        android:id="@+id/crt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/mobb"
+        android:fontFamily="@font/abeezee"
+        android:layout_below="@+id/head"
+        android:layout_marginTop="15dp"
+        android:gravity="end"
+        android:textSize="10sp" />
+
+
+
+</RelativeLayout>
