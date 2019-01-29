@@ -15,6 +15,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import com.virtualskillset.discountmania.helper.SharedPrefManager;
 import com.virtualskillset.discountmania.helper.URLs;
@@ -34,12 +38,31 @@ public class SpalashActivity extends AppCompatActivity {
     ApiInterface apiInterr;
     private String oldvr ,newVr;
     private int id=0,vers=0,comp=0,oldv_code=0;
+    TypeWriter typeWriter,title1,title2;
+    ImageView logo;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spalash);
+        logo = (ImageView) findViewById(R.id.imgLogo);
+        typeWriter = findViewById(R.id.typo);
+        title1 = findViewById(R.id.title_1);
+        title2 = findViewById(R.id.title_2);
+        Animation rotate = AnimationUtils.loadAnimation(SpalashActivity.this,R.anim.pump_bottom);
+        rotate.setDuration(3000);
+        rotate.setStartOffset(200);
+        logo.startAnimation(rotate);
+        typeWriter.setText("");
+        typeWriter.setCharacterDelay(100);
+        typeWriter.animateText("www.discountmania.com");
+        title1.setText("");
+        title1.setCharacterDelay(100);
+        title1.animateText("A Tradition of Service");
+        title2.setText("");
+        title2.setCharacterDelay(100);
+        title2.animateText("A Signature of Excellence");
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
             oldvr= pInfo.versionName;
@@ -54,7 +77,7 @@ public class SpalashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    Thread.sleep(1600);
+                    Thread.sleep(3500);
                     runOnUiThread(new  Runnable() {
                         public void run() {
                             try {
