@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_white_24dp"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_best_offer"
+        android:icon="@drawable/ic_offer"
+        android:title="Best Offer" />
+    <item
+        android:id="@+id/mall"
+        android:icon="@drawable/ic_shopping_basket_24dp"
+        android:title="Mall" />
+
+    <item
+        android:id="@+id/nav_digitalcard"
+        android:icon="@drawable/ic_move_to_inbox_black_24dp"
+        android:title="Inbox" />
+
+</menu>

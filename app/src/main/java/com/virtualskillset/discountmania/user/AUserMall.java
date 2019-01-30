@@ -1,23 +1,12 @@
 package com.virtualskillset.discountmania.user;
 
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import com.virtualskillset.discountmania.R;
 
 public class AUserMall extends AppCompatActivity {
@@ -60,8 +49,10 @@ public class AUserMall extends AppCompatActivity {
             }
 
             @Override
-            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                Toast.makeText(getApplicationContext(), "Error:" + description, Toast.LENGTH_SHORT).show();
+            public void onReceivedError(WebView view, int errorCode,
+                                        String description, String failingUrl) {
+                Toast.makeText(getApplicationContext(), "Error:" +
+                        description, Toast.LENGTH_SHORT).show();
 
             }
         });

@@ -9,10 +9,22 @@
     android:background="#eee"
     tools:showIn="@layout/app_bar_user_main">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager"
+        android:layout_above="@+id/bottom_navigation_sheet"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation_sheet"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/frame">
-    </FrameLayout>
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/user_main_botton_navigation_menu"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

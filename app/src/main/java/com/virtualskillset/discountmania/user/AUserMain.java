@@ -7,9 +7,15 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -40,6 +46,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -52,12 +61,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AUserMain extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private FragmentManager fragmentManager;
+    //private FragmentManager fragmentManager;
     User user;
     ApiUserInter apiIfc;
     private ImageView profileImg;
     private TextView oName,bName;
     private ModelUserData model;
+    private ViewPager viewPager;
+    private BottomNavigationView mBottomNavigationView;
+    private MenuItem prevMenuItem;
     //ApiUserInter apiIfc;
 
     @Override
@@ -66,7 +78,8 @@ public class AUserMain extends AppCompatActivity
         setContentView(R.layout.activity_user_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        viewPager = findViewById(R.id.view_pager);
+        mBottomNavigationView = findViewById(R.id.bottom_navigation_sheet);
        /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,28 +101,84 @@ public class AUserMain extends AppCompatActivity
         // get menu from navigationView
         Menu menu = navigationView.getMenu();
         View hView =  navigationView.getHeaderView(0);
-       // TextView namee=(TextView)hView.findViewById(R.id.usr);
+        // TextView namee=(TextView)hView.findViewById(R.id.usr);
         oName=(TextView)hView.findViewById(R.id.usr);
         bName=(TextView)hView.findViewById(R.id.textView);
         profileImg=(ImageView)hView.findViewById(R.id.imageView);
         if(user.getId()==0)
         {
-        // find MenuItem you want to change
-        MenuItem nav_camara = menu.findItem(R.id.nav_logout);
-        // set new title to the MenuItem
-        nav_camara.setTitle("Login/signup"); }
-      //  namee.setText(user.getName());
+            // find MenuItem you want to change
+            MenuItem nav_camara = menu.findItem(R.id.nav_logout);
+            // set new title to the MenuItem
+            nav_camara.setTitle("Login/signup"); }
+        setViewPager();
+        //  namee.setText(user.getName());
 
-        fragmentManager = getSupportFragmentManager();
+       /* fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         //Instructions fragment = new Instructions();
         Fragment fragment= FUserCategory.newInstance();
         fragmentTransaction.add(R.id.frame, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.commit();*/
         if(user.getId()!=0) {
             getImage();
         }
+    }
+
+
+    void setViewPager(){
+        ArrayList< Fragment > fragmentArrayList = new ArrayList< >();
+        fragmentArrayList.add(FUserCategory.newInstance());
+        fragmentArrayList.add(FUserCategory.newInstance());
+        fragmentArrayList.add(FUserCategory.newInstance());
+        fragmentArrayList.add(FUserCategory.newInstance());
+        final FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(),
+                4,fragmentArrayList);
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+                if (prevMenuItem != null) {
+                    prevMenuItem.setChecked(false);
+                } else {
+                    mBottomNavigationView.getMenu().getItem(0).setChecked(false);
+                }
+                mBottomNavigationView.getMenu().getItem(i).setChecked(true);
+                prevMenuItem = mBottomNavigationView.getMenu().getItem(i);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
+        mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.home:
+                         viewPager.setCurrentItem(0);
+                         break;
+                    case R.id.nav_best_offer:
+                         viewPager.setCurrentItem(1);
+                         break;
+                    case R.id.mall:
+                         viewPager.setCurrentItem(2);
+                         break;
+                    case R.id.nav_digitalcard:
+                         viewPager.setCurrentItem(3);
+                         break;
+                }
+                return false;
+            }
+        });
+
     }
 
     @Override
@@ -118,7 +187,7 @@ public class AUserMain extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            Fragment currentFragment = fragmentManager.findFragmentById(R.id.frame);
+            Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.frame);
             if (currentFragment.getClass().getSimpleName().equals("FUserCategory")) {
                 new AlertDialog.Builder(this)
                         .setIcon(R.mipmap.ic_launcher)
@@ -134,13 +203,13 @@ public class AUserMain extends AppCompatActivity
                         .setNegativeButton("No", null)
                         .show();
 
-               // super.onBackPressed();
+                // super.onBackPressed();
             }
             else {
                 // Log.i("MainActivity", "nothing on backstack, calling super");
                 try {
                     Fragment fragment=FUserCategory.newInstance();
-                    fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment).commit();
                 } catch (Exception e) {
                 }
             }
@@ -192,36 +261,36 @@ public class AUserMain extends AppCompatActivity
                 finish();
             }
             else {
-            startActivity(new Intent(AUserMain.this,AUserProfile.class));}
+                startActivity(new Intent(AUserMain.this,AUserProfile.class));}
         }   else if (id == R.id.nav_logout) {
             SharedPrefManager.getInstance(AUserMain.this).logout();
             finish();
         }
         else if (id == R.id.nav_share) {
-           try {
-            Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                    R.drawable.dmlogo);
-            Intent share = new Intent(Intent.ACTION_SEND);
-            share.setType("image/*");
-            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-            icon.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-            File f = new File(Environment.getExternalStorageDirectory()
-                    + File.separator + "temporary_file.jpg");
             try {
-                f.createNewFile();
-                FileOutputStream fo = new FileOutputStream(f);
-                fo.write(bytes.toByteArray());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-               String link = "\n\n \" We increase your savings \"\n Join and earn upto 50000 per month ....\n\n";
-            link = link + "https://play.google.com/store/apps/details?id=com.virtualskillset.discountmania \n\n";
-            share.putExtra(Intent.EXTRA_TEXT, link);
-            share.putExtra(Intent.EXTRA_STREAM,
-                    Uri.parse(Environment.getExternalStorageDirectory().getAbsolutePath()+"/temporary_file.jpg"));
-            startActivity(Intent.createChooser(share, "Share with"));
+                Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                        R.drawable.dmlogo);
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("image/*");
+                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+                icon.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+                File f = new File(Environment.getExternalStorageDirectory()
+                        + File.separator + "temporary_file.jpg");
+                try {
+                    f.createNewFile();
+                    FileOutputStream fo = new FileOutputStream(f);
+                    fo.write(bytes.toByteArray());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                String link = "\n\n \" We increase your savings \"\n Join and earn upto 50000 per month ....\n\n";
+                link = link + "https://play.google.com/store/apps/details?id=com.virtualskillset.discountmania \n\n";
+                share.putExtra(Intent.EXTRA_TEXT, link);
+                share.putExtra(Intent.EXTRA_STREAM,
+                        Uri.parse(Environment.getExternalStorageDirectory().getAbsolutePath()+"/temporary_file.jpg"));
+                startActivity(Intent.createChooser(share, "Share with"));
 
-          } catch (Exception e) {
+            } catch (Exception e) {
                 try {
                     Intent i = new Intent(Intent.ACTION_SEND);
                     i.setType("text/plain");
@@ -238,7 +307,7 @@ public class AUserMain extends AppCompatActivity
             startActivity(new Intent(AUserMain.this,AUserBestOffers.class));
         }
         else if (id == R.id.nav_benfits) {
-                startActivity(new Intent(AUserMain.this,TransactionsActivity.class));
+            startActivity(new Intent(AUserMain.this,TransactionsActivity.class));
 
         }
         else if (id == R.id.nav_team) {
@@ -251,7 +320,7 @@ public class AUserMain extends AppCompatActivity
                 finish();
             }
             else {
-            startActivity(new Intent(AUserMain.this,AUserDigitalCard.class));
+                startActivity(new Intent(AUserMain.this,AUserDigitalCard.class));
             }
         }
         else if (id == R.id.nav_doorstep) {
@@ -304,13 +373,13 @@ public class AUserMain extends AppCompatActivity
                 model=response.body();
                 oName.setText(model.getName());
                 try{
-                if(model.getPaid()==1)
-                {
-                    bName.setText("Prime");
-                }
-                else {
-                    bName.setText("Basic");
-                }}catch (Exception e){ bName.setText("Unknown");}
+                    if(model.getPaid()==1)
+                    {
+                        bName.setText("Prime");
+                    }
+                    else {
+                        bName.setText("Basic");
+                    }}catch (Exception e){ bName.setText("Unknown");}
 
                 // int loader = R.drawable.ic_admin;
                 String image_url = "http://discountmania.org/images/client/"+model.getImage();
